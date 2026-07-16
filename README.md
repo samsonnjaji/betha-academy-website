@@ -37,7 +37,10 @@ npm start
 - School content, phone number, classes, fees, navigation, gallery categories, and
   image metadata: `src/lib/content.ts`
 - Original school photography: `public/images/school`
+- Updated supplied school-photo sources: `assets/school-photos/set-02-updated-originals`
 - Remaining temporary learner-activity imagery: `public/images`
+- Official logo, favicon, Apple icon, and app-icon assets: `public/brand`
+- Preserved logo source and cleanup assets: `assets/brand`
 - Global design tokens and responsive styling: `src/app/globals.css`
 - Contact form submission hook: `src/components/contact-form.tsx`,
   inside `handleSubmit`
@@ -69,6 +72,14 @@ appear. To add more real school photography:
 2. Update the `images` object in `src/lib/content.ts`.
 3. Keep the existing meaningful alt-text structure and replace it with accurate
    descriptions of the real photographs.
+
+## Brand assets
+
+The official Betha Academy logo is used in the header and footer. The full crest
+is preserved as a transparent asset, while a tighter cap-and-book emblem is used
+for favicons and mobile app icons so the mark remains recognizable at small
+sizes. Re-run `node scripts/process-logo.mjs` after replacing the authoritative
+logo source or cleanup source in `assets/brand`.
 
 ## Contact form integration
 

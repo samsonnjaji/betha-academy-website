@@ -40,7 +40,7 @@ export function SiteFooter() {
       </div>
       <div className="container footer-bottom">
         <p>© {new Date().getFullYear()} Betha Academy. All rights reserved.</p>
-        <p>Original Betha Academy campus photography is now featured throughout the website.</p>
+        <p>Betha Academy campus imagery is featured throughout the website.</p>
       </div>
     </footer>
   );

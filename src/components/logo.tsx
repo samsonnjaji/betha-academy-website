@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { BookOpen } from "lucide-react";
 
 export function Logo({ inverse = false }: { inverse?: boolean }) {
   return (
@@ -9,7 +9,13 @@ export function Logo({ inverse = false }: { inverse?: boolean }) {
       aria-label="Betha Academy home"
     >
       <span className="brand__mark" aria-hidden="true">
-        <BookOpen size={23} strokeWidth={2.2} />
+        <Image
+          src="/brand/betha-logo-full.webp"
+          alt=""
+          fill
+          sizes="60px"
+          priority
+        />
       </span>
       <span className="brand__text">
         <strong>Betha</strong>

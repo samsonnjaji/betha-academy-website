@@ -69,35 +69,45 @@ export type GalleryCategory =
   | "All"
   | "School Entrance"
   | "School Grounds"
-  | "Classroom Blocks";
+  | "Classroom Blocks"
+  | "School Vehicles";
 
 export const galleryCategories: GalleryCategory[] = [
   "All",
   "School Entrance",
   "School Grounds",
   "Classroom Blocks",
+  "School Vehicles",
 ];
 
 export const images = {
   hero: {
-    src: "/images/school/01-main-gate.webp",
-    alt: "The main entrance gate of Betha Academy",
+    src: "/images/school/01-main-gate-with-learners.webp",
+    alt: "Learners arriving at the main entrance gate of Betha Academy",
   },
   schoolCourtyard: {
-    src: "/images/school/06-courtyard-balanced.webp",
-    alt: "Betha Academy courtyard with classroom blocks surrounding the open grounds",
+    src: "/images/school/07-courtyard-learners-c.webp",
+    alt: "Learners in the Betha Academy courtyard with classroom blocks surrounding the open grounds",
   },
   schoolGrounds: {
-    src: "/images/school/04-courtyard-trees.webp",
-    alt: "A wide view of the Betha Academy grounds, trees, and classroom blocks",
+    src: "/images/school/04-courtyard-tree-view.webp",
+    alt: "A wide view of learners, trees, and classroom blocks at Betha Academy",
   },
   classroomBlock: {
-    src: "/images/school/05-classroom-block.webp",
-    alt: "A classroom block overlooking the Betha Academy grounds",
+    src: "/images/school/02-courtyard-learners-a.webp",
+    alt: "Learners across the Betha Academy grounds in front of the classroom blocks",
   },
   paintedClassrooms: {
-    src: "/images/school/07-painted-classrooms.webp",
-    alt: "Painted learning spaces and classroom blocks at Betha Academy",
+    src: "/images/school/03-courtyard-learners-b.webp",
+    alt: "Betha Academy learners near the painted classroom blocks",
+  },
+  schoolBus: {
+    src: "/images/school/05-school-bus.webp",
+    alt: "Learners standing beside a branded Betha Academy bus",
+  },
+  schoolVan: {
+    src: "/images/school/06-school-van.webp",
+    alt: "Learners standing beside a branded Betha Academy van",
   },
   cbc: {
     src: "/images/cbc-nature.webp",
@@ -124,15 +134,13 @@ export const galleryItems = [
     category: "School Entrance" as GalleryCategory,
   },
   {
-    src: "/images/school/02-courtyard-wide-a.webp",
-    alt: "A wide view across the Betha Academy courtyard",
-    title: "The central courtyard",
+    ...images.classroomBlock,
+    title: "The active central courtyard",
     category: "School Grounds" as GalleryCategory,
   },
   {
-    src: "/images/school/03-courtyard-wide-b.webp",
-    alt: "Betha Academy classroom blocks viewed across the school grounds",
-    title: "Learning spaces around the grounds",
+    ...images.paintedClassrooms,
+    title: "Learning spaces around the courtyard",
     category: "School Grounds" as GalleryCategory,
   },
   {
@@ -141,18 +149,18 @@ export const galleryItems = [
     category: "School Grounds" as GalleryCategory,
   },
   {
-    ...images.classroomBlock,
-    title: "Classroom block",
-    category: "Classroom Blocks" as GalleryCategory,
+    ...images.schoolBus,
+    title: "Betha Academy branded bus",
+    category: "School Vehicles" as GalleryCategory,
   },
   {
     ...images.schoolCourtyard,
-    title: "A wide, connected campus",
-    category: "School Grounds" as GalleryCategory,
+    title: "Classrooms around the school grounds",
+    category: "Classroom Blocks" as GalleryCategory,
   },
   {
-    ...images.paintedClassrooms,
-    title: "Colourful learning spaces",
-    category: "Classroom Blocks" as GalleryCategory,
+    ...images.schoolVan,
+    title: "Betha Academy branded van",
+    category: "School Vehicles" as GalleryCategory,
   },
 ] as const;

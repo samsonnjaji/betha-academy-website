@@ -22,6 +22,21 @@ export const metadata: Metadata = {
     "Primary school",
     "Kenya education",
   ],
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/brand/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/brand/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/brand/favicon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [
+      {
+        url: "/brand/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
   openGraph: {
     title: "Betha Academy",
     description:
@@ -30,10 +45,10 @@ export const metadata: Metadata = {
     locale: "en_KE",
     images: [
       {
-        url: "/images/school/01-main-gate.webp",
-        width: 1600,
-        height: 737,
-        alt: "The main entrance gate of Betha Academy",
+        url: "/images/school/01-main-gate-with-learners.webp",
+        width: 1676,
+        height: 942,
+        alt: "Learners arriving at the main entrance gate of Betha Academy",
       },
     ],
   },
