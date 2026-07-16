@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Betha Academy Website
 
-## Getting Started
+A custom, responsive school website for Betha Academy, built with Next.js App
+Router, TypeScript, Tailwind CSS, and Lucide icons.
 
-First, run the development server:
+## Pages
+
+- Home
+- About Us
+- Vision & Mission
+- CBC Curriculum
+- Admissions
+- Fees Structure
+- Gallery
+- Contact Us
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For a production check:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run typecheck
+npm run build
+npm start
+```
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+- School content, phone number, classes, fees, navigation, gallery categories, and
+  image metadata: `src/lib/content.ts`
+- Original school photography: `public/images/school`
+- Remaining temporary learner-activity imagery: `public/images`
+- Global design tokens and responsive styling: `src/app/globals.css`
+- Contact form submission hook: `src/components/contact-form.tsx`,
+  inside `handleSubmit`
+- Public website URL: copy `.env.example` to `.env.local` and set
+  `NEXT_PUBLIC_SITE_URL`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content still required from Betha Academy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The supplied content does not include:
 
-## Deploy on Vercel
+- The school’s physical location or directions
+- An official email address
+- Current office hours
+- An official website domain
+- Original Betha Academy photographs
+- The approved service or recipient for online enquiry submissions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+These details are intentionally omitted or clearly marked instead of being
+invented.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Image replacement
+
+The school entrance, grounds, and classroom-block images are original Betha
+Academy photographs. The remaining learner-activity WebP files are temporary,
+fictional illustrative scenes and are labelled beside the sections where they
+appear. To add more real school photography:
+
+1. Add optimized images to `public/images`.
+2. Update the `images` object in `src/lib/content.ts`.
+3. Keep the existing meaningful alt-text structure and replace it with accurate
+   descriptions of the real photographs.
+
+## Contact form integration
+
+The form currently validates in the browser and presents an honest
+integration-ready state without simulating a backend submission. Connect the
+`handleSubmit` function in `src/components/contact-form.tsx` to Betha Academy’s
+approved form provider, API endpoint, or email service once those details are
+available.
