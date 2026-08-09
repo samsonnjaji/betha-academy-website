@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import { ArrowDown, Compass, Eye, Flag, Quote, Target } from "lucide-react";
 import { AdmissionCta } from "@/components/admission-cta";
 import { PageHero } from "@/components/page-hero";
 import { school } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Vision & Mission",
+export const metadata = createPageMetadata({
+  title: "Betha Academy Vision and Mission",
   description:
-    "Read Betha Academy’s vision, mission, and educational purpose for developing capable, responsible, confident learners.",
-};
+    "Read the vision and mission that guide Betha Academy in Timau as we develop capable, responsible, and confident learners.",
+  path: "/vision-mission",
+});
 
 export default function VisionMissionPage() {
   return (
@@ -18,6 +19,7 @@ export default function VisionMissionPage() {
         title="Excellence today. Confidence for tomorrow."
         description="Our direction is clear: develop well-rounded learners who are prepared for future opportunities and challenges."
         icon={Compass}
+        path="/vision-mission"
       />
       <section className="section">
         <div className="container vision-cards">

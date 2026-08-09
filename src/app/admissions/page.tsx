@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ClipboardCheck, FileText, Phone, School } from "lucide-react";
 import { AdmissionCta } from "@/components/admission-cta";
@@ -6,12 +5,14 @@ import { AdmissionSteps } from "@/components/steps";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { school } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Admissions",
+export const metadata = createPageMetadata({
+  title: "Betha Academy Admissions in Timau",
   description:
-    "View the Betha Academy admission process for Playgroup, PP1, PP2, and Grade 1 through Grade 4.",
-};
+    "Apply to Betha Academy in Timau. Admissions are open for Playgroup, PP1, PP2, and Grade 1 through Grade 4.",
+  path: "/admissions",
+});
 
 export default function AdmissionsPage() {
   return (
@@ -21,6 +22,7 @@ export default function AdmissionsPage() {
         title="A warm welcome to your child’s next learning chapter."
         description="Admissions are currently open for learners from Playgroup to Grade 4 only."
         icon={ClipboardCheck}
+        path="/admissions"
       />
       <section className="section">
         <div className="container admissions-intro">

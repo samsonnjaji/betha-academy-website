@@ -12,8 +12,8 @@ export function AdmissionCta() {
             <p className="eyebrow eyebrow--light">Admissions are open</p>
             <h2>Give Your Child a Strong Foundation</h2>
             <p>
-              Enrol your child at Betha Academy and become part of a safe,
-              supportive, and enriching learning community.
+              Enrol your child at Betha Academy in Timau and become part of a
+              safe, supportive, and enriching learning community.
             </p>
           </div>
           <div className="admission-cta__actions">

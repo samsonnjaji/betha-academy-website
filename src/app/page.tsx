@@ -6,6 +6,7 @@ import {
   Brain,
   Check,
   HeartHandshake,
+  MapPin,
   Palette,
   Phone,
   ShieldCheck,
@@ -20,6 +21,13 @@ import { GalleryGrid } from "@/components/gallery-grid";
 import { ImageNote } from "@/components/image-note";
 import { SectionHeading } from "@/components/section-heading";
 import { images, school } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Betha Academy Timau | CBC School in Meru County",
+  description: school.description,
+  path: "/",
+});
 
 const reasons = [
   {
@@ -89,8 +97,8 @@ export default function Home() {
             <p className="eyebrow eyebrow--light">Welcome to Betha Academy</p>
             <h1>{school.promise}</h1>
             <p className="home-hero__lead">
-              Quality education in a safe, caring, and supportive environment,
-              nurturing every learner toward excellence and good character.
+              Betha Academy is a CBC school in Timau, Meru County, offering a
+              safe and supportive start from Playgroup through Grade 4.
             </p>
             <div className="hero-actions">
               <Link className="button button--accent" href="/admissions">
@@ -119,16 +127,16 @@ export default function Home() {
           </div>
           <div className="intro-copy">
             <p>
-              We provide an enriching learning environment where learners can
-              discover their abilities, develop essential skills, and build a
-              strong foundation for their future.
+              We provide an enriching learning environment in Timau where
+              learners can discover their abilities, develop essential skills,
+              and build a strong foundation for their future.
             </p>
             <p>
               Our approach combines academic development, personal growth,
               discipline, creativity, and social responsibility.
             </p>
             <Link className="text-link" href="/about-us">
-              Discover our approach
+              About Betha Academy
               <ArrowRight size={17} aria-hidden="true" />
             </Link>
           </div>
@@ -154,7 +162,7 @@ export default function Home() {
           </div>
           <div className="center-action">
             <Link className="button button--primary" href="/admissions">
-              Start the admission process
+              View Betha Academy admissions
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
@@ -241,7 +249,7 @@ export default function Home() {
               </li>
             </ul>
             <Link className="button button--primary" href="/cbc-curriculum">
-              Explore our curriculum
+              Explore our CBC curriculum
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
@@ -305,7 +313,7 @@ export default function Home() {
           <AdmissionSteps compact />
           <div className="section-actions">
             <Link className="button button--light" href="/admissions">
-              See all five steps
+              View Betha Academy admissions
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <a className="button button--ghost-light" href={school.phoneHref}>
@@ -325,7 +333,7 @@ export default function Home() {
               description="The admission fee is KSh 100 for every listed class level."
             />
             <Link className="text-link" href="/fees-structure">
-              Full fee information
+              See school fees
               <ArrowRight size={17} aria-hidden="true" />
             </Link>
           </div>
@@ -342,11 +350,41 @@ export default function Home() {
               description="Explore the school entrance, open grounds, and classroom blocks through photographs of the campus."
             />
             <Link className="text-link" href="/gallery">
-              Explore the gallery
+              See the school gallery
               <ArrowRight size={17} aria-hidden="true" />
             </Link>
           </div>
           <GalleryGrid preview />
+        </div>
+      </section>
+
+      <section className="section visit-section">
+        <div className="container visit-card">
+          <span className="icon-box" aria-hidden="true">
+            <MapPin />
+          </span>
+          <div>
+            <p className="eyebrow">Visit Betha Academy</p>
+            <h2>Serving families in Timau and nearby communities.</h2>
+            <p>
+              Betha Academy serves families in Timau and surrounding communities
+              within Meru County and the wider Nanyuki–Meru corridor.
+            </p>
+            <p className="visit-card__address">{school.location.display}</p>
+          </div>
+          <div className="visit-card__actions">
+            <a
+              className="button button--primary"
+              href={school.location.directionsUrl}
+              rel="noopener noreferrer"
+            >
+              Get directions
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
+            <Link className="button button--outline" href="/contact-us">
+              Contact Betha Academy in Timau
+            </Link>
+          </div>
         </div>
       </section>
 

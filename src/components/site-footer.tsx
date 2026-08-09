@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, Phone } from "lucide-react";
 import { navigation, school } from "@/lib/content";
 import { Logo } from "./logo";
+import { SocialLinks } from "./social-links";
 
 export function SiteFooter() {
   const quickLinks = navigation.filter((item) => item.href !== "/");
@@ -11,11 +12,15 @@ export function SiteFooter() {
       <div className="container footer-grid">
         <div className="footer-intro">
           <Logo inverse />
-          <p>{school.vision}</p>
-          <a className="footer-phone" href={school.phoneHref}>
-            <Phone size={18} aria-hidden="true" />
-            {school.phoneDisplay}
-          </a>
+          <address className="footer-nap">
+            <strong>{school.name}</strong>
+            <span>{school.location.display}</span>
+            <a className="footer-phone" href={school.phoneHref}>
+              <Phone size={18} aria-hidden="true" />
+              {school.phoneDisplay}
+            </a>
+          </address>
+          <SocialLinks />
         </div>
         <div>
           <h2>Quick links</h2>
@@ -34,7 +39,7 @@ export function SiteFooter() {
           <p className="eyebrow eyebrow--light">Admissions</p>
           <h2>Currently enrolling from Playgroup to Grade 4.</h2>
           <Link className="button button--light" href="/admissions">
-            View admission process
+            View Betha Academy admissions
           </Link>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import {
   BookOpenCheck,
@@ -14,12 +13,14 @@ import { ImageNote } from "@/components/image-note";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { images, school } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "CBC Curriculum",
+export const metadata = createPageMetadata({
+  title: "CBC School in Timau | Betha Academy Curriculum",
   description:
-    "Explore Betha Academy’s Competency-Based Curriculum approach from Playgroup through Grade 4.",
-};
+    "See how Betha Academy in Timau delivers Kenya’s Competency-Based Curriculum from Playgroup through Grade 4.",
+  path: "/cbc-curriculum",
+});
 
 const approaches = [
   { icon: Puzzle, text: "Think critically and solve problems" },
@@ -48,6 +49,7 @@ export default function CbcCurriculumPage() {
         title="Learning by thinking, creating, doing, and growing."
         description="Betha Academy follows Kenya’s Competency-Based Curriculum, placing the learner at the centre of the learning process."
         icon={BookOpenCheck}
+        path="/cbc-curriculum"
       />
       <section className="section">
         <div className="container feature-split">

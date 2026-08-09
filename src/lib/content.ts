@@ -1,12 +1,66 @@
+const productionSiteUrl = "https://bethaacademy.co.ke";
+
+function resolveSiteUrl() {
+  const candidate = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+  if (!candidate) {
+    return productionSiteUrl;
+  }
+
+  try {
+    const url = new URL(candidate);
+    const { hostname } = url;
+    if (
+      hostname === "localhost" ||
+      hostname === "127.0.0.1" ||
+      hostname.endsWith(".workers.dev") ||
+      hostname.endsWith(".vercel.app") ||
+      hostname === "www.bethaacademy.co.ke"
+    ) {
+      return productionSiteUrl;
+    }
+    return url.origin;
+  } catch {
+    return productionSiteUrl;
+  }
+}
+
+export const siteUrl = resolveSiteUrl();
+
 export const school = {
   name: "Betha Academy",
-  phoneDisplay: "0702 617 707",
-  phoneHref: "tel:0702617707",
+  alternateName: "Betha Academy Timau",
   promise: "Nurturing Excellence, Character, and Responsibility",
   vision:
     "Striving for excellence today to prepare students to succeed in a challenging world of tomorrow.",
   mission:
     "To ensure each student accomplishes academic success, excellence, personal growth, and responsibility by providing a safe and enriching learning environment customised to each student’s needs and aspirations.",
+  description:
+    "Betha Academy is a CBC school in Timau, Meru County, offering a safe and supportive learning environment from Playgroup through Grade 4.",
+  phoneDisplay: "0702 617 707",
+  phoneInternational: "+254 702 617 707",
+  phoneE164: "+254702617707",
+  phoneHref: "tel:+254702617707",
+  location: {
+    locality: "Timau",
+    region: "Meru County",
+    country: "Kenya",
+    countryCode: "KE",
+    display: "Timau, Meru County, Kenya",
+    postalCode: "10406",
+    mailingDisplay: "P.O. Box 235, Timau 10406",
+    corridor: "Timau–Meru–Nanyuki corridor",
+    mapsQuery: "Betha Academy, Timau, Kenya",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Betha+Academy%2C+Timau%2C+Kenya",
+    directionsUrl:
+      "https://www.google.com/maps/dir/?api=1&destination=Betha+Academy%2C+Timau%2C+Kenya",
+  },
+  socials: {
+    facebook: null as string | null,
+    instagram: null as string | null,
+    tiktok: null as string | null,
+    youtube: null as string | null,
+  },
   classes: [
     "Playgroup",
     "PP1",
@@ -18,8 +72,11 @@ export const school = {
   ],
 } as const;
 
-export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+export function verifiedSocialUrls() {
+  return Object.values(school.socials).filter(
+    (url): url is string => typeof url === "string" && url.length > 0,
+  );
+}
 
 export const navigation = [
   { label: "Home", href: "/" },
@@ -42,7 +99,7 @@ export const admissionSteps = [
   {
     title: "Visit or contact the school",
     description:
-      "Visit the Betha Academy school office or call us for admission information.",
+      "Visit the Betha Academy school office in Timau or call us for admission information.",
   },
   {
     title: "Complete the application form",
@@ -83,7 +140,9 @@ export const galleryCategories: GalleryCategory[] = [
 export const images = {
   hero: {
     src: "/images/school/01-main-gate-with-learners.webp",
-    alt: "Learners arriving at the main entrance gate of Betha Academy",
+    alt: "Learners arriving at the main entrance gate of Betha Academy in Timau",
+    width: 1676,
+    height: 942,
   },
   schoolCourtyard: {
     src: "/images/school/07-courtyard-learners-c.webp",

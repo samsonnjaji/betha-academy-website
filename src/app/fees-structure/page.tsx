@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Banknote, Check, Info, Phone } from "lucide-react";
 import { AdmissionCta } from "@/components/admission-cta";
@@ -6,12 +5,14 @@ import { FeesTable } from "@/components/fees-table";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { school } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Fees Structure",
+export const metadata = createPageMetadata({
+  title: "Betha Academy School Fees",
   description:
-    "View Betha Academy tuition fees and the KSh 100 admission fee for Playgroup through Grade 4.",
-};
+    "View current Betha Academy school fees in Timau, including tuition and the KSh 100 admission fee from Playgroup to Grade 4.",
+  path: "/fees-structure",
+});
 
 const notes = [
   "The admission fee is KSh 100.",
@@ -28,6 +29,7 @@ export default function FeesPage() {
         title="Clear fees for every class currently offered."
         description="Betha Academy is committed to providing quality and accessible education."
         icon={Banknote}
+        path="/fees-structure"
       />
       <section className="section">
         <div className="container">

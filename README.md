@@ -44,22 +44,21 @@ npm start
 - Global design tokens and responsive styling: `src/app/globals.css`
 - Contact form submission hook: `src/components/contact-form.tsx`,
   inside `handleSubmit`
-- Public website URL: copy `.env.example` to `.env.local` and set
-  `NEXT_PUBLIC_SITE_URL`
+- Public website URL: copy `.env.example` to `.env.local` if needed. Production
+  canonical URLs always use `https://bethaacademy.co.ke`
+- Local SEO launch checklist: `docs/SEO-LOCAL-LAUNCH.md`
 
 ## Content still required from Betha Academy
 
-The supplied content does not include:
+Still needed before publishing more specific details:
 
-- The school’s physical location or directions
-- An official email address
+- Exact physical street address / verified Google Place
+- Official email address
 - Current office hours
-- An official website domain
-- Original Betha Academy photographs
+- Verified Facebook, Instagram, TikTok, or YouTube URLs
 - The approved service or recipient for online enquiry submissions
 
-These details are intentionally omitted or clearly marked instead of being
-invented.
+Do not invent these. Location is published only as Timau, Meru County, Kenya.
 
 ## Image replacement
 

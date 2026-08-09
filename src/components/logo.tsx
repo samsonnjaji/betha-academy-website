@@ -14,7 +14,6 @@ export function Logo({ inverse = false }: { inverse?: boolean }) {
           alt=""
           fill
           sizes="60px"
-          priority
         />
       </span>
       <span className="brand__text">

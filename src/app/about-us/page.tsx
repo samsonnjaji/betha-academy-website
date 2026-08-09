@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -13,12 +12,14 @@ import { AdmissionCta } from "@/components/admission-cta";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { images } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About Us",
+export const metadata = createPageMetadata({
+  title: "About Betha Academy Timau",
   description:
-    "Learn about Betha Academy’s commitment to quality education, individual learner support, character, confidence, and responsibility.",
-};
+    "Learn about Betha Academy in Timau, a CBC school committed to quality education, individual learner support, character, and responsibility.",
+  path: "/about-us",
+});
 
 const commitments = [
   "Delivering quality education",
@@ -36,8 +37,9 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="A caring environment where every learner can grow."
-        description="Betha Academy nurtures learners academically, socially, emotionally, and morally."
+        description="Betha Academy in Timau nurtures learners academically, socially, emotionally, and morally."
         icon={HeartHandshake}
+        path="/about-us"
       />
       <section className="section">
         <div className="container feature-split feature-split--about">
@@ -56,8 +58,8 @@ export default function AboutPage() {
               title="Quality education shaped around the individual learner."
             />
             <p>
-              Betha Academy is committed to providing quality education in a safe,
-              caring, and supportive environment.
+              Betha Academy is committed to providing quality CBC education in
+              Timau, Meru County, in a safe, caring, and supportive environment.
             </p>
             <p>
               Our goal is to help every learner develop confidence, good

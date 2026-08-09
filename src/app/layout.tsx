@@ -3,25 +3,39 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ScrollTop } from "@/components/scroll-top";
-import { siteUrl } from "@/lib/content";
+import { JsonLd } from "@/components/json-ld";
+import { school, siteUrl } from "@/lib/content";
+import { siteGraph } from "@/lib/schema";
+import { ogImage } from "@/lib/seo";
+
+const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  applicationName: school.name,
   title: {
-    default: "Betha Academy | Excellence, Character & Responsibility",
+    default: "Betha Academy Timau | CBC School in Meru County",
     template: "%s | Betha Academy",
   },
-  description:
-    "Betha Academy provides quality CBC education in a safe, caring and supportive environment for learners from Playgroup to Grade 4.",
-  keywords: [
-    "Betha Academy",
-    "CBC school",
-    "Playgroup",
-    "PP1",
-    "PP2",
-    "Primary school",
-    "Kenya education",
-  ],
+  description: school.description,
+  authors: [{ name: school.name, url: siteUrl }],
+  creator: school.name,
+  publisher: school.name,
+  category: "education",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  ...(googleVerification
+    ? { verification: { google: googleVerification } }
+    : {}),
+  alternates: {
+    canonical: siteUrl,
+  },
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
@@ -38,19 +52,19 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Betha Academy",
-    description:
-      "Nurturing excellence, character and responsibility from Playgroup to Grade 4.",
+    title: "Betha Academy Timau | CBC School in Meru County",
+    description: school.description,
     type: "website",
     locale: "en_KE",
-    images: [
-      {
-        url: "/images/school/01-main-gate-with-learners.webp",
-        width: 1676,
-        height: 942,
-        alt: "Learners arriving at the main entrance gate of Betha Academy",
-      },
-    ],
+    url: siteUrl,
+    siteName: school.name,
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Betha Academy Timau | CBC School in Meru County",
+    description: school.description,
+    images: [ogImage.url],
   },
 };
 
@@ -60,8 +74,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-KE">
       <body>
+        <JsonLd data={siteGraph()} />
         <SiteHeader />
         <main id="main-content">{children}</main>
         <SiteFooter />
