@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { images, school, siteUrl } from "@/lib/content";
+import { school, siteUrl } from "@/lib/content";
 
 export const ogImage = {
-  url: images.hero.src,
-  width: images.hero.width,
-  height: images.hero.height,
-  alt: images.hero.alt,
+  url: `${siteUrl}/images/share/betha-academy-og.jpg`,
+  secureUrl: `${siteUrl}/images/share/betha-academy-og.jpg`,
+  type: "image/jpeg",
+  width: 1200,
+  height: 630,
+  alt: "Betha Academy campus gate in Timau with school branding, promise, and Meru County location",
 };
 
 export function pageUrl(path: string) {
