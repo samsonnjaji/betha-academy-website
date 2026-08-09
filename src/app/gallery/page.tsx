@@ -18,7 +18,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title="A closer look at the Betha Academy campus."
-        description="Explore the school entrance, learners, open courtyard, surrounding classroom blocks, and branded school vehicles."
+        description="Explore the school entrance, learners, open courtyard, classroom blocks, and the branded Betha Academy bus and van."
         icon={Images}
         path="/gallery"
       />

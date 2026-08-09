@@ -303,6 +303,41 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section section--cream">
+        <div className="container">
+          <SectionHeading
+            eyebrow="School vehicles"
+            title="The Betha Academy bus and van."
+            description="These campus photographs show the school’s branded bus and van. Call Betha Academy for current transport information."
+            align="center"
+          />
+          <div className="vehicle-grid">
+            <figure>
+              <Image
+                src={images.schoolBus.src}
+                alt={images.schoolBus.alt}
+                fill
+                sizes="(max-width: 800px) 100vw, 50vw"
+              />
+              <figcaption>
+                <strong>Betha Academy bus</strong>
+              </figcaption>
+            </figure>
+            <figure>
+              <Image
+                src={images.schoolVan.src}
+                alt={images.schoolVan.alt}
+                fill
+                sizes="(max-width: 800px) 100vw, 50vw"
+              />
+              <figcaption>
+                <strong>Betha Academy van</strong>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <section className="section section--green">
         <div className="container">
           <SectionHeading
@@ -347,7 +382,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Life and learning"
               title="A real glimpse of Betha Academy."
-              description="Explore the school entrance, open grounds, and classroom blocks through photographs of the campus."
+              description="Explore the school entrance, open grounds, classroom blocks, and branded school vehicles."
             />
             <Link className="text-link" href="/gallery">
               See the school gallery

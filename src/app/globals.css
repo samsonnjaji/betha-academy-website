@@ -1054,6 +1054,57 @@ textarea {
   background: var(--green-100);
 }
 
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.vehicle-grid figure {
+  position: relative;
+  min-height: 420px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--green-100);
+  box-shadow: var(--shadow-md);
+}
+
+.vehicle-grid img {
+  object-fit: cover;
+}
+
+.vehicle-grid figcaption {
+  position: absolute;
+  z-index: 2;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+}
+
+.vehicle-grid figcaption::before {
+  content: "";
+  position: absolute;
+  inset: auto -22px -22px;
+  height: 140px;
+  background: linear-gradient(transparent, rgba(8, 34, 27, 0.88));
+  pointer-events: none;
+}
+
+.vehicle-grid figcaption strong {
+  position: relative;
+  z-index: 1;
+}
+
+.vehicle-grid figcaption strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -2376,6 +2427,10 @@ a.contact-method:hover {
   }
 
   .visit-card {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicle-grid {
     grid-template-columns: 1fr;
   }
 

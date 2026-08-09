@@ -193,6 +193,16 @@ export const galleryItems = [
     category: "School Entrance" as GalleryCategory,
   },
   {
+    ...images.schoolBus,
+    title: "Betha Academy branded bus",
+    category: "School Vehicles" as GalleryCategory,
+  },
+  {
+    ...images.schoolVan,
+    title: "Betha Academy branded van",
+    category: "School Vehicles" as GalleryCategory,
+  },
+  {
     ...images.classroomBlock,
     title: "The active central courtyard",
     category: "School Grounds" as GalleryCategory,
@@ -208,18 +218,8 @@ export const galleryItems = [
     category: "School Grounds" as GalleryCategory,
   },
   {
-    ...images.schoolBus,
-    title: "Betha Academy branded bus",
-    category: "School Vehicles" as GalleryCategory,
-  },
-  {
     ...images.schoolCourtyard,
     title: "Classrooms around the school grounds",
     category: "Classroom Blocks" as GalleryCategory,
-  },
-  {
-    ...images.schoolVan,
-    title: "Betha Academy branded van",
-    category: "School Vehicles" as GalleryCategory,
   },
 ] as const;
