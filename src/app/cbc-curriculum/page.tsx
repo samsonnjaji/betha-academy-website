@@ -173,7 +173,7 @@ export default function CbcCurriculumPage() {
                 alt={images.classroom.alt}
                 fill
                 sizes="(max-width: 800px) 100vw, 45vw"
-                style={{ objectPosition: "center 25%" }}
+                style={{ objectPosition: images.classroom.objectPosition }}
               />
             </div>
           </article>

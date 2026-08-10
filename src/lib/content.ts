@@ -176,8 +176,9 @@ export const images = {
     alt: "Yellow Betha Academy van marked Betha Academy Timau on the school grounds",
   },
   classroom: {
-    src: `${authentic}/14-classroom-teacher-learning-materials.webp`,
+    src: `${authentic}/14-classroom-learning.webp`,
     alt: "Betha Academy pupil in a classroom with learning materials on the wall",
+    objectPosition: "center 20%",
   },
   classroomLife: {
     src: `${authentic}/15-classroom-pupils-refreshments.webp`,
@@ -281,7 +282,6 @@ export const galleryItems = [
     ...images.classroom,
     title: "Classroom learning",
     category: "Learning" as GalleryCategory,
-    objectPosition: "center 25%",
     showOnHome: true,
   },
   {
