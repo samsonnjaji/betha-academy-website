@@ -403,31 +403,34 @@ export default function Home() {
             <Image
               src={images.schoolVan.src}
               alt={images.schoolVan.alt}
-              fill
-              sizes="(max-width: 900px) 100vw, 280px"
+              width={1024}
+              height={471}
+              sizes="(max-width: 900px) 100vw, 300px"
             />
           </div>
-          <div>
-            <p className="eyebrow">Visit Betha Academy</p>
-            <h2>A Timau school serving nearby families.</h2>
-            <p>
-              Betha Academy is in Timau, Meru County, and welcomes families from
-              surrounding communities along the Nanyuki–Meru corridor.
-            </p>
-            <p className="visit-card__address">{school.location.display}</p>
-          </div>
-          <div className="visit-card__actions">
-            <a
-              className="button button--primary"
-              href={school.location.directionsUrl}
-              rel="noopener noreferrer"
-            >
-              Get directions
-              <ArrowRight size={18} aria-hidden="true" />
-            </a>
-            <Link className="button button--outline" href="/contact-us">
-              Contact Betha Academy in Timau
-            </Link>
+          <div className="visit-card__body">
+            <div className="visit-card__copy">
+              <p className="eyebrow">Visit Betha Academy</p>
+              <h2>A Timau school serving nearby families.</h2>
+              <p>
+                Betha Academy is in Timau, Meru County, and welcomes families
+                from surrounding communities along the Nanyuki–Meru corridor.
+              </p>
+              <p className="visit-card__address">{school.location.display}</p>
+            </div>
+            <div className="visit-card__actions">
+              <a
+                className="button button--primary"
+                href={school.location.directionsUrl}
+                rel="noopener noreferrer"
+              >
+                Get directions
+                <ArrowRight size={18} aria-hidden="true" />
+              </a>
+              <Link className="button button--outline" href="/contact-us">
+                Contact Betha Academy in Timau
+              </Link>
+            </div>
           </div>
         </div>
       </section>

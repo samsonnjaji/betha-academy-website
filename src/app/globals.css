@@ -2203,8 +2203,8 @@ a.contact-method:hover {
 
 .visit-card {
   display: grid;
-  grid-template-columns: 260px 1fr auto;
-  gap: 28px;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: 32px;
   align-items: center;
   padding: 36px;
   border: 1px solid var(--border);
@@ -2213,23 +2213,36 @@ a.contact-method:hover {
 }
 
 .visit-card__image {
-  position: relative;
-  min-height: 180px;
-  aspect-ratio: 16 / 9;
+  min-width: 0;
   overflow: hidden;
   border-radius: var(--radius-md);
   background: #e7dcc8;
 }
 
 .visit-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center 55%;
 }
 
-.visit-card h2 {
+.visit-card__body {
+  display: grid;
+  gap: 22px;
+  min-width: 0;
+}
+
+.visit-card__copy h2 {
   margin-bottom: 12px;
   color: var(--green-950);
   font-size: clamp(28px, 3vw, 40px);
+}
+
+.visit-card__copy > p:not(.eyebrow):not(.visit-card__address) {
+  margin-bottom: 0;
+  color: var(--ink-700);
 }
 
 .visit-card__address {
@@ -2239,7 +2252,8 @@ a.contact-method:hover {
 }
 
 .visit-card__actions {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
