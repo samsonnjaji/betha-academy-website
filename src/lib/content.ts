@@ -167,12 +167,13 @@ export const images = {
     alt: "Betha Academy learners near the painted classroom blocks",
   },
   schoolBus: {
-    src: "/images/school/05-school-bus.webp",
-    alt: "Learners standing beside a branded Betha Academy bus",
+    src: "/images/school/09-school-bus-isuzu.webp",
+    alt: "Yellow Betha Academy school bus parked under a shelter on the Timau campus",
+    objectPosition: "center 38%",
   },
   schoolVan: {
-    src: "/images/school/06-school-van.webp",
-    alt: "Learners standing beside a branded Betha Academy van",
+    src: "/images/school/08-school-van-timau.webp",
+    alt: "Yellow Betha Academy van marked Betha Academy Timau on the school grounds",
   },
   classroom: {
     src: `${authentic}/14-classroom-teacher-learning-materials.webp`,
@@ -352,13 +353,13 @@ export const galleryItems = [
     category: "Trips & Events" as GalleryCategory,
   },
   {
-    ...images.schoolBus,
-    title: "Betha Academy bus",
+    ...images.schoolVan,
+    title: "School van in Timau",
     category: "Transport" as GalleryCategory,
   },
   {
-    ...images.schoolVan,
-    title: "Betha Academy van",
+    ...images.schoolBus,
+    title: "Betha Academy bus",
     category: "Transport" as GalleryCategory,
   },
   {

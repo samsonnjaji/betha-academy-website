@@ -576,6 +576,25 @@ textarea {
   margin-top: 8px;
 }
 
+.local-points {
+  margin: 8px 0 22px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.local-points li {
+  padding: 7px 12px;
+  border: 1px solid #d7d2c6;
+  border-radius: 999px;
+  color: var(--green-950);
+  background: var(--white);
+  font-size: 12px;
+  font-weight: 720;
+}
+
 .class-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -1056,18 +1075,27 @@ textarea {
 
 .vehicle-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.35fr 0.85fr;
   gap: 18px;
+  align-items: stretch;
 }
 
 .vehicle-grid figure {
   position: relative;
-  min-height: 420px;
   margin: 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  background: var(--green-100);
+  background: #e7dcc8;
   box-shadow: var(--shadow-md);
+}
+
+.vehicle-card--landscape {
+  min-height: 420px;
+  aspect-ratio: 16 / 9;
+}
+
+.vehicle-card--portrait {
+  min-height: 420px;
 }
 
 .vehicle-grid img {
@@ -2194,13 +2222,27 @@ a.contact-method:hover {
 
 .visit-card {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 260px 1fr auto;
   gap: 28px;
   align-items: center;
   padding: 36px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--cream-100);
+}
+
+.visit-card__image {
+  position: relative;
+  min-height: 180px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: #e7dcc8;
+}
+
+.visit-card__image img {
+  object-fit: cover;
+  object-position: center 55%;
 }
 
 .visit-card h2 {
@@ -2601,6 +2643,15 @@ a.contact-method:hover {
 
   .vehicle-grid {
     grid-template-columns: 1fr;
+  }
+
+  .vehicle-card--landscape,
+  .vehicle-card--portrait {
+    min-height: 0;
+  }
+
+  .vehicle-card--portrait {
+    aspect-ratio: 3 / 4;
   }
 
   .footer-admissions {

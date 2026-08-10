@@ -6,7 +6,6 @@ import {
   Brain,
   Check,
   HeartHandshake,
-  MapPin,
   Palette,
   Phone,
   ShieldCheck,
@@ -134,6 +133,11 @@ export default function Home() {
               Our approach combines academic development, personal growth,
               discipline, creativity, and social responsibility.
             </p>
+            <ul className="local-points">
+              <li>Timau, Meru County</li>
+              <li>Nanyuki–Meru corridor</li>
+              <li>Playgroup to Grade 4</li>
+            </ul>
             <Link className="text-link" href="/about-us">
               About Betha Academy
               <ArrowRight size={17} aria-hidden="true" />
@@ -304,32 +308,33 @@ export default function Home() {
       <section className="section section--cream">
         <div className="container">
           <SectionHeading
-            eyebrow="School vehicles"
-            title="The Betha Academy bus and van."
-            description="These campus photographs show the school’s branded bus and van. Call Betha Academy for current transport information."
+            eyebrow="School transport"
+            title="The Betha Academy bus and van in Timau."
+            description="These are the school’s own branded vehicles. Call Betha Academy for current transport information."
             align="center"
           />
           <div className="vehicle-grid">
-            <figure>
-              <Image
-                src={images.schoolBus.src}
-                alt={images.schoolBus.alt}
-                fill
-                sizes="(max-width: 800px) 100vw, 50vw"
-              />
-              <figcaption>
-                <strong>Betha Academy bus</strong>
-              </figcaption>
-            </figure>
-            <figure>
+            <figure className="vehicle-card vehicle-card--landscape">
               <Image
                 src={images.schoolVan.src}
                 alt={images.schoolVan.alt}
                 fill
-                sizes="(max-width: 800px) 100vw, 50vw"
+                sizes="(max-width: 800px) 100vw, 58vw"
               />
               <figcaption>
-                <strong>Betha Academy van</strong>
+                <strong>Betha Academy van, Timau</strong>
+              </figcaption>
+            </figure>
+            <figure className="vehicle-card vehicle-card--portrait">
+              <Image
+                src={images.schoolBus.src}
+                alt={images.schoolBus.alt}
+                fill
+                sizes="(max-width: 800px) 100vw, 40vw"
+                style={{ objectPosition: images.schoolBus.objectPosition }}
+              />
+              <figcaption>
+                <strong>Betha Academy bus</strong>
               </figcaption>
             </figure>
           </div>
@@ -393,15 +398,20 @@ export default function Home() {
 
       <section className="section visit-section">
         <div className="container visit-card">
-          <span className="icon-box" aria-hidden="true">
-            <MapPin />
-          </span>
+          <div className="visit-card__image">
+            <Image
+              src={images.schoolVan.src}
+              alt={images.schoolVan.alt}
+              fill
+              sizes="(max-width: 900px) 100vw, 280px"
+            />
+          </div>
           <div>
             <p className="eyebrow">Visit Betha Academy</p>
-            <h2>Serving families in Timau and nearby communities.</h2>
+            <h2>A Timau school serving nearby families.</h2>
             <p>
-              Betha Academy serves families in Timau and surrounding communities
-              within Meru County and the wider Nanyuki–Meru corridor.
+              Betha Academy is in Timau, Meru County, and welcomes families from
+              surrounding communities along the Nanyuki–Meru corridor.
             </p>
             <p className="visit-card__address">{school.location.display}</p>
           </div>
