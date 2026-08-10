@@ -60,16 +60,19 @@ const facilities = [
     icon: ShieldCheck,
     title: "Safe learning environment",
     text: "We prioritise the safety and well-being of every learner.",
+    image: images.classroomBlock,
   },
   {
     icon: Sprout,
     title: "Playground",
     text: "Space for recreation, physical activity, interaction, and play.",
+    image: images.outdoorActivity,
   },
   {
     icon: Users,
     title: "Child-friendly classrooms",
     text: "Welcoming and supportive environments suitable for young learners.",
+    image: images.classroomLife,
   },
 ];
 
@@ -282,16 +285,14 @@ export default function Home() {
             align="center"
           />
           <div className="facilities-grid">
-            {facilities.map(({ icon: Icon, title, text }, index) => (
+            {facilities.map(({ icon: Icon, title, text, image }) => (
               <article className="facility-card" key={title}>
-                {index === 1 && (
-                  <Image
-                    src={images.schoolGrounds.src}
-                    alt={images.schoolGrounds.alt}
-                    fill
-                    sizes="(max-width: 800px) 100vw, 33vw"
-                  />
-                )}
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 800px) 100vw, 33vw"
+                />
                 <div className="facility-card__content">
                   <span className="icon-box" aria-hidden="true">
                     <Icon />
