@@ -1056,7 +1056,7 @@ textarea {
 
 .vehicle-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.85fr;
+  grid-template-columns: 1fr 1fr;
   gap: 18px;
   align-items: stretch;
 }
@@ -1070,13 +1070,10 @@ textarea {
   box-shadow: var(--shadow-md);
 }
 
-.vehicle-card--landscape {
-  min-height: 420px;
-  aspect-ratio: 16 / 9;
-}
-
+.vehicle-card--landscape,
 .vehicle-card--portrait {
-  min-height: 420px;
+  min-height: 320px;
+  aspect-ratio: 16 / 10;
 }
 
 .vehicle-grid img {

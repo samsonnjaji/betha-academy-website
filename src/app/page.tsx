@@ -310,8 +310,8 @@ export default function Home() {
         <div className="container">
           <SectionHeading
             eyebrow="School transport"
-            title="The Betha Academy bus and van in Timau."
-            description="These are the school’s own branded vehicles. Call Betha Academy for current transport information."
+            title="Betha Academy vehicles in Timau."
+            description="Current and earlier school vehicles. Call Betha Academy on 0702 617 707 for current transport information."
             align="center"
           />
           <div className="vehicle-grid">
@@ -320,10 +320,10 @@ export default function Home() {
                 src={images.schoolVan.src}
                 alt={images.schoolVan.alt}
                 fill
-                sizes="(max-width: 800px) 100vw, 58vw"
+                sizes="(max-width: 800px) 100vw, 50vw"
               />
               <figcaption>
-                <strong>Betha Academy van, Timau</strong>
+                <strong>School van, Timau</strong>
               </figcaption>
             </figure>
             <figure className="vehicle-card vehicle-card--portrait">
@@ -331,11 +331,33 @@ export default function Home() {
                 src={images.schoolBus.src}
                 alt={images.schoolBus.alt}
                 fill
-                sizes="(max-width: 800px) 100vw, 40vw"
+                sizes="(max-width: 800px) 100vw, 50vw"
                 style={{ objectPosition: images.schoolBus.objectPosition }}
               />
               <figcaption>
-                <strong>Betha Academy bus</strong>
+                <strong>School bus</strong>
+              </figcaption>
+            </figure>
+            <figure className="vehicle-card vehicle-card--landscape">
+              <Image
+                src={images.whiteVan.src}
+                alt={images.whiteVan.alt}
+                fill
+                sizes="(max-width: 800px) 100vw, 50vw"
+              />
+              <figcaption>
+                <strong>White school van</strong>
+              </figcaption>
+            </figure>
+            <figure className="vehicle-card vehicle-card--landscape">
+              <Image
+                src={images.historicBusFront.src}
+                alt={images.historicBusFront.alt}
+                fill
+                sizes="(max-width: 800px) 100vw, 50vw"
+              />
+              <figcaption>
+                <strong>Bus from earlier years</strong>
               </figcaption>
             </figure>
           </div>

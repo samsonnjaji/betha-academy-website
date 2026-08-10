@@ -18,7 +18,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title="A closer look at life at Betha Academy."
-        description="Explore authentic photographs of the campus, learners, activities, and the branded Betha Academy bus and van."
+        description="Explore authentic photographs of the campus, learners, community events, activities, and Betha Academy vehicles."
         icon={Images}
         path="/gallery"
       />
@@ -27,7 +27,7 @@ export default function GalleryPage() {
           <SectionHeading
             eyebrow="Life at Betha Academy"
             title="School life, learning, and the Timau campus."
-            description="Use the categories below to browse authentic Betha Academy photographs. Some images reflect school life and community over time."
+            description="Use the categories below to browse authentic Betha Academy photographs. Some images show school life, community events, and vehicles from across the school’s history."
             align="center"
           />
           <GalleryGrid />

@@ -236,6 +236,30 @@ export const images = {
     src: `${authentic}/06-students-with-betha-academy-bus.webp`,
     alt: "Betha Academy pupils gathered with a branded school bus",
   },
+  historicBusSide: {
+    src: `${authentic}/07-betha-academy-bus-side-view.webp`,
+    alt: "Side view of a branded Betha Academy school bus",
+  },
+  historicBusFront: {
+    src: `${authentic}/08-betha-academy-bus-front-2015.webp`,
+    alt: "Front view of a branded Betha Academy school bus from earlier years",
+  },
+  whiteVan: {
+    src: `${authentic}/48-betha-academy-white-van.webp`,
+    alt: "White Betha Academy van with school branding parked on the grounds",
+  },
+  giftPresentation: {
+    src: `${authentic}/55-student-receiving-pink-bucket.webp`,
+    alt: "Betha Academy pupil receiving a gift during a school community event",
+  },
+  giftHandshake: {
+    src: `${authentic}/62-student-handshake-with-basin.webp`,
+    alt: "Betha Academy pupil shaking hands while receiving a gift at a school event",
+  },
+  giftYounger: {
+    src: `${authentic}/64-younger-student-receiving-gift.webp`,
+    alt: "Younger Betha Academy pupil receiving a gift at a school community event",
+  },
   schoolSign: {
     src: `${authentic}/49-younger-pupils-group-outdoors.webp`,
     alt: "Betha Academy pupils standing beside the school sign",
@@ -310,6 +334,21 @@ export const galleryItems = [
     category: "School Life" as GalleryCategory,
   },
   {
+    ...images.giftPresentation,
+    title: "Community gift presentation",
+    category: "School Life" as GalleryCategory,
+  },
+  {
+    ...images.giftHandshake,
+    title: "A gift for a learner",
+    category: "School Life" as GalleryCategory,
+  },
+  {
+    ...images.giftYounger,
+    title: "Younger learners at a school event",
+    category: "School Life" as GalleryCategory,
+  },
+  {
     ...images.outdoorTable,
     title: "Shared outdoor time",
     category: "School Life" as GalleryCategory,
@@ -360,6 +399,21 @@ export const galleryItems = [
   {
     ...images.schoolBus,
     title: "Betha Academy bus",
+    category: "Transport" as GalleryCategory,
+  },
+  {
+    ...images.whiteVan,
+    title: "White Betha Academy van",
+    category: "Transport" as GalleryCategory,
+  },
+  {
+    ...images.historicBusFront,
+    title: "School bus from earlier years",
+    category: "Transport" as GalleryCategory,
+  },
+  {
+    ...images.historicBusSide,
+    title: "Betha Academy bus, side view",
     category: "Transport" as GalleryCategory,
   },
   {
