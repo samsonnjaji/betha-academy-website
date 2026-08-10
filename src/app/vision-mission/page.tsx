@@ -1,7 +1,8 @@
+import Image from "next/image";
 import { ArrowDown, Compass, Eye, Flag, Quote, Target } from "lucide-react";
 import { AdmissionCta } from "@/components/admission-cta";
 import { PageHero } from "@/components/page-hero";
-import { school } from "@/lib/content";
+import { images, school } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -22,6 +23,25 @@ export default function VisionMissionPage() {
         path="/vision-mission"
       />
       <section className="section">
+        <div className="container feature-split vision-photo">
+          <div className="feature-split__image">
+            <Image
+              src={images.campusAssembly.src}
+              alt={images.campusAssembly.alt}
+              fill
+              sizes="(max-width: 900px) 100vw, 48vw"
+            />
+          </div>
+          <div className="feature-split__content">
+            <p className="eyebrow">Our school community</p>
+            <h2>A caring community, prepared for tomorrow.</h2>
+            <p>
+              Betha Academy seeks to develop well-rounded learners who are
+              academically capable, responsible, confident, respectful, and
+              prepared for future opportunities and challenges.
+            </p>
+          </div>
+        </div>
         <div className="container vision-cards">
           <article className="statement-card statement-card--vision">
             <div className="statement-card__top">

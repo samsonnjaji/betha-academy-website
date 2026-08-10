@@ -56,7 +56,7 @@ export const school = {
       "https://www.google.com/maps/dir/?api=1&destination=Betha+Academy%2C+Timau%2C+Kenya",
   },
   socials: {
-    facebook: null as string | null,
+    facebook: "https://www.facebook.com/BethaAcademy",
     instagram: null as string | null,
     tiktok: null as string | null,
     youtube: null as string | null,
@@ -124,18 +124,24 @@ export const admissionSteps = [
 
 export type GalleryCategory =
   | "All"
-  | "School Entrance"
-  | "School Grounds"
-  | "Classroom Blocks"
-  | "School Vehicles";
+  | "Campus"
+  | "Learning"
+  | "School Life"
+  | "Activities"
+  | "Transport"
+  | "Trips & Events";
 
 export const galleryCategories: GalleryCategory[] = [
   "All",
-  "School Entrance",
-  "School Grounds",
-  "Classroom Blocks",
-  "School Vehicles",
+  "Campus",
+  "Learning",
+  "School Life",
+  "Activities",
+  "Transport",
+  "Trips & Events",
 ];
+
+const authentic = "/images/school/authentic";
 
 export const images = {
   hero: {
@@ -168,21 +174,73 @@ export const images = {
     src: "/images/school/06-school-van.webp",
     alt: "Learners standing beside a branded Betha Academy van",
   },
-  cbc: {
-    src: "/images/cbc-nature.webp",
-    alt: "Temporary illustrative image of children exploring leaves during a practical learning activity",
+  classroom: {
+    src: `${authentic}/14-classroom-teacher-learning-materials.webp`,
+    alt: "Betha Academy pupil in a classroom with learning materials on the wall",
   },
-  creative: {
-    src: "/images/creative-art.webp",
-    alt: "Temporary illustrative image of young children taking part in a guided creative activity",
+  classroomLife: {
+    src: `${authentic}/15-classroom-pupils-refreshments.webp`,
+    alt: "Betha Academy learners during a classroom school-life moment",
   },
-  play: {
-    src: "/images/outdoor-play.webp",
-    alt: "Temporary illustrative image of children enjoying supervised outdoor play",
+  outdoorLearning: {
+    src: `${authentic}/39-pupils-outdoor-activity-with-teacher.webp`,
+    alt: "Betha Academy teacher and pupils during an outdoor learning activity",
   },
-  reading: {
-    src: "/images/shared-reading.webp",
-    alt: "Temporary illustrative image of children reading together in a classroom library corner",
+  sports: {
+    src: `${authentic}/03-sports-uniform-group-with-ball.webp`,
+    alt: "Betha Academy pupils in sports kit posing with a football",
+  },
+  singing: {
+    src: `${authentic}/72-student-group-singing.webp`,
+    alt: "Betha Academy pupils taking part in a school singing activity",
+  },
+  drama: {
+    src: `${authentic}/76-student-drama-performance.webp`,
+    alt: "Betha Academy learners taking part in a school performance",
+  },
+  performance: {
+    src: `${authentic}/77-student-performing-before-school.webp`,
+    alt: "Betha Academy pupil performing during a school event",
+  },
+  outdoorActivity: {
+    src: `${authentic}/32-school-pupils-outdoor-activity.webp`,
+    alt: "Betha Academy pupils during an outdoor school activity",
+  },
+  outdoorTable: {
+    src: `${authentic}/71-students-around-outdoor-table.webp`,
+    alt: "Betha Academy pupils gathered around an outdoor table",
+  },
+  assembly: {
+    src: `${authentic}/38-pupils-outdoor-assembly-seated.webp`,
+    alt: "Betha Academy pupils seated together for a school gathering",
+  },
+  campusAssembly: {
+    src: `${authentic}/70-school-assembly-campus-wide.webp`,
+    alt: "Betha Academy pupils gathered on the school grounds",
+  },
+  community: {
+    src: `${authentic}/16-school-community-outdoor-gathering.webp`,
+    alt: "Betha Academy school community gathered outdoors",
+  },
+  equatorTrip: {
+    src: `${authentic}/05-student-group-equator-nanyuki.webp`,
+    alt: "Betha Academy pupils on an educational outing",
+  },
+  outingSteps: {
+    src: `${authentic}/01-group-outing-stone-steps.webp`,
+    alt: "Betha Academy pupils during a school outing",
+  },
+  busCommunity: {
+    src: `${authentic}/06-students-with-betha-academy-bus.webp`,
+    alt: "Betha Academy pupils gathered with a branded school bus",
+  },
+  schoolSign: {
+    src: `${authentic}/49-younger-pupils-group-outdoors.webp`,
+    alt: "Betha Academy pupils standing beside the school sign",
+  },
+  historicalGate: {
+    src: `${authentic}/50-school-gate-and-pupils-wide.webp`,
+    alt: "Betha Academy pupils near the school gate",
   },
 } as const;
 
@@ -190,36 +248,122 @@ export const galleryItems = [
   {
     ...images.hero,
     title: "Welcome to Betha Academy",
-    category: "School Entrance" as GalleryCategory,
-  },
-  {
-    ...images.schoolBus,
-    title: "Betha Academy branded bus",
-    category: "School Vehicles" as GalleryCategory,
-  },
-  {
-    ...images.schoolVan,
-    title: "Betha Academy branded van",
-    category: "School Vehicles" as GalleryCategory,
-  },
-  {
-    ...images.classroomBlock,
-    title: "The active central courtyard",
-    category: "School Grounds" as GalleryCategory,
-  },
-  {
-    ...images.paintedClassrooms,
-    title: "Learning spaces around the courtyard",
-    category: "School Grounds" as GalleryCategory,
+    category: "Campus" as GalleryCategory,
   },
   {
     ...images.schoolGrounds,
     title: "Open school grounds",
-    category: "School Grounds" as GalleryCategory,
+    category: "Campus" as GalleryCategory,
   },
   {
     ...images.schoolCourtyard,
-    title: "Classrooms around the school grounds",
-    category: "Classroom Blocks" as GalleryCategory,
+    title: "Classrooms around the courtyard",
+    category: "Campus" as GalleryCategory,
+  },
+  {
+    ...images.classroomBlock,
+    title: "Learners on the school grounds",
+    category: "Campus" as GalleryCategory,
+  },
+  {
+    ...images.paintedClassrooms,
+    title: "Painted classroom blocks",
+    category: "Campus" as GalleryCategory,
+  },
+  {
+    ...images.schoolSign,
+    title: "School identity",
+    category: "Campus" as GalleryCategory,
+    objectPosition: "center 18%",
+  },
+  {
+    ...images.classroom,
+    title: "Classroom learning",
+    category: "Learning" as GalleryCategory,
+    objectPosition: "center 25%",
+    showOnHome: true,
+  },
+  {
+    ...images.outdoorLearning,
+    title: "Learning beyond the classroom",
+    category: "Learning" as GalleryCategory,
+  },
+  {
+    ...images.classroomLife,
+    title: "School life indoors",
+    category: "School Life" as GalleryCategory,
+  },
+  {
+    ...images.assembly,
+    title: "A school gathering",
+    category: "School Life" as GalleryCategory,
+  },
+  {
+    ...images.campusAssembly,
+    title: "Together on the grounds",
+    category: "School Life" as GalleryCategory,
+  },
+  {
+    ...images.community,
+    title: "School community",
+    category: "School Life" as GalleryCategory,
+  },
+  {
+    ...images.outdoorTable,
+    title: "Shared outdoor time",
+    category: "School Life" as GalleryCategory,
+  },
+  {
+    ...images.sports,
+    title: "Sports and play",
+    category: "Activities" as GalleryCategory,
+    showOnHome: true,
+  },
+  {
+    ...images.singing,
+    title: "Singing together",
+    category: "Activities" as GalleryCategory,
+  },
+  {
+    ...images.drama,
+    title: "School performance",
+    category: "Activities" as GalleryCategory,
+    showOnHome: true,
+  },
+  {
+    ...images.performance,
+    title: "Creative presentation",
+    category: "Activities" as GalleryCategory,
+  },
+  {
+    ...images.outdoorActivity,
+    title: "Outdoor school activity",
+    category: "Activities" as GalleryCategory,
+  },
+  {
+    ...images.equatorTrip,
+    title: "Educational outing",
+    category: "Trips & Events" as GalleryCategory,
+    showOnHome: true,
+  },
+  {
+    ...images.outingSteps,
+    title: "A day out with the school",
+    category: "Trips & Events" as GalleryCategory,
+  },
+  {
+    ...images.schoolBus,
+    title: "Betha Academy bus",
+    category: "Transport" as GalleryCategory,
+  },
+  {
+    ...images.schoolVan,
+    title: "Betha Academy van",
+    category: "Transport" as GalleryCategory,
+  },
+  {
+    ...images.busCommunity,
+    title: "Pupils with the school bus",
+    category: "Transport" as GalleryCategory,
   },
 ] as const;

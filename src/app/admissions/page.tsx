@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ClipboardCheck, FileText, Phone, School } from "lucide-react";
 import { AdmissionCta } from "@/components/admission-cta";
 import { AdmissionSteps } from "@/components/steps";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
-import { school } from "@/lib/content";
+import { images, school } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -32,13 +33,21 @@ export default function AdmissionsPage() {
               title="A clear, supportive admission process."
               description="Betha Academy welcomes parents and guardians looking for a safe, supportive, and enriching learning environment for their children."
             />
-          </div>
-          <div className="admissions-open-card">
-            <span className="status-dot" aria-hidden="true" />
-            <div>
-              <strong>Admissions are open</strong>
-              <p>Playgroup, PP1, PP2, Grade 1, Grade 2, Grade 3 & Grade 4</p>
+            <div className="admissions-open-card">
+              <span className="status-dot" aria-hidden="true" />
+              <div>
+                <strong>Admissions are open</strong>
+                <p>Playgroup, PP1, PP2, Grade 1, Grade 2, Grade 3 & Grade 4</p>
+              </div>
             </div>
+          </div>
+          <div className="admissions-intro__image">
+            <Image
+              src={images.historicalGate.src}
+              alt={images.historicalGate.alt}
+              fill
+              sizes="(max-width: 900px) 100vw, 42vw"
+            />
           </div>
         </div>
       </section>

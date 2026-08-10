@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "Betha Academy Timau School Gallery",
   description:
-    "See photographs of the Betha Academy campus in Timau, including the entrance, courtyard, classroom blocks, and school vehicles.",
+    "See authentic photographs of Betha Academy in Timau, including campus life, learning, activities, and school vehicles.",
   path: "/gallery",
 });
 
@@ -17,8 +17,8 @@ export default function GalleryPage() {
     <>
       <PageHero
         eyebrow="Gallery"
-        title="A closer look at the Betha Academy campus."
-        description="Explore the school entrance, learners, open courtyard, classroom blocks, and the branded Betha Academy bus and van."
+        title="A closer look at life at Betha Academy."
+        description="Explore authentic photographs of the campus, learners, activities, and the branded Betha Academy bus and van."
         icon={Images}
         path="/gallery"
       />
@@ -26,8 +26,8 @@ export default function GalleryPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Life at Betha Academy"
-            title="The school, from the gate to the classroom blocks."
-            description="Use the categories below to explore the updated Betha Academy image collection. More classroom and activity images can be added as they become available."
+            title="School life, learning, and the Timau campus."
+            description="Use the categories below to browse authentic Betha Academy photographs. Some images reflect school life and community over time."
             align="center"
           />
           <GalleryGrid />

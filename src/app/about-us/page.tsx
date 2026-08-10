@@ -42,36 +42,56 @@ export default function AboutPage() {
         path="/about-us"
       />
       <section className="section">
-        <div className="container feature-split feature-split--about">
-          <div className="feature-split__image">
-            <Image
-              src={images.schoolCourtyard.src}
-              alt={images.schoolCourtyard.alt}
-              fill
-              priority
-              sizes="(max-width: 900px) 100vw, 48vw"
-            />
+        <div className="container">
+          <div className="feature-split feature-split--about">
+            <div className="feature-split__image">
+              <Image
+                src={images.schoolCourtyard.src}
+                alt={images.schoolCourtyard.alt}
+                fill
+                priority
+                sizes="(max-width: 900px) 100vw, 48vw"
+              />
+            </div>
+            <div className="feature-split__content">
+              <SectionHeading
+                eyebrow="About Betha Academy"
+                title="Quality education shaped around the individual learner."
+              />
+              <p>
+                Betha Academy is committed to providing quality CBC education in
+                Timau, Meru County, in a safe, caring, and supportive environment.
+              </p>
+              <p>
+                Our goal is to help every learner develop confidence, good
+                character, responsibility, and the skills required to succeed in an
+                increasingly challenging world.
+              </p>
+              <p>
+                We understand that every learner has unique needs, abilities, and
+                aspirations. We therefore strive to provide an enriching
+                environment that supports individual growth and encourages every
+                child to reach their full potential.
+              </p>
+            </div>
           </div>
-          <div className="feature-split__content">
-            <SectionHeading
-              eyebrow="About Betha Academy"
-              title="Quality education shaped around the individual learner."
-            />
-            <p>
-              Betha Academy is committed to providing quality CBC education in
-              Timau, Meru County, in a safe, caring, and supportive environment.
-            </p>
-            <p>
-              Our goal is to help every learner develop confidence, good
-              character, responsibility, and the skills required to succeed in an
-              increasingly challenging world.
-            </p>
-            <p>
-              We understand that every learner has unique needs, abilities, and
-              aspirations. We therefore strive to provide an enriching
-              environment that supports individual growth and encourages every
-              child to reach their full potential.
-            </p>
+          <div className="about-photo-row">
+            <figure>
+              <Image
+                src={images.community.src}
+                alt={images.community.alt}
+                fill
+                sizes="(max-width: 800px) 100vw, 50vw"
+              />
+            </figure>
+            <figure>
+              <Image
+                src={images.paintedClassrooms.src}
+                alt={images.paintedClassrooms.alt}
+                fill
+                sizes="(max-width: 800px) 100vw, 50vw"
+              />
+            </figure>
           </div>
         </div>
       </section>

@@ -9,7 +9,6 @@ import {
   Users,
 } from "lucide-react";
 import { AdmissionCta } from "@/components/admission-cta";
-import { ImageNote } from "@/components/image-note";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { images, school } from "@/lib/content";
@@ -39,6 +38,21 @@ const earlyYears = [
   "Early literacy",
   "Early numeracy",
   "Confidence and independence",
+];
+
+const activityPhotos = [
+  {
+    image: images.sports,
+    caption: "Sports and play",
+  },
+  {
+    image: images.singing,
+    caption: "Creative and co-curricular activities",
+  },
+  {
+    image: images.drama,
+    caption: "School performance",
+  },
 ];
 
 export default function CbcCurriculumPage() {
@@ -75,13 +89,12 @@ export default function CbcCurriculumPage() {
           </div>
           <div className="feature-split__image">
             <Image
-              src={images.cbc.src}
-              alt={images.cbc.alt}
+              src={images.outdoorLearning.src}
+              alt={images.outdoorLearning.alt}
               fill
               priority
               sizes="(max-width: 900px) 100vw, 48vw"
             />
-            <ImageNote />
           </div>
         </div>
       </section>
@@ -105,6 +118,29 @@ export default function CbcCurriculumPage() {
         </div>
       </section>
       <section className="section">
+        <div className="container">
+          <SectionHeading
+            eyebrow="School activities"
+            title="Learning that continues beyond the classroom."
+            description="Authentic photographs of Betha Academy pupils taking part in sports, creative activities, and educational experiences."
+            align="center"
+          />
+          <div className="activity-photo-grid">
+            {activityPhotos.map(({ image, caption }) => (
+              <figure key={image.src}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 800px) 100vw, 25vw"
+                />
+                <figcaption>{caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section section--cream">
         <div className="container programme-grid">
           <article className="programme-card">
             <div className="programme-card__number">01</div>
@@ -133,16 +169,14 @@ export default function CbcCurriculumPage() {
             </p>
             <div className="programme-card__image">
               <Image
-                src={images.creative.src}
-                alt={images.creative.alt}
+                src={images.classroom.src}
+                alt={images.classroom.alt}
                 fill
                 sizes="(max-width: 800px) 100vw, 45vw"
+                style={{ objectPosition: "center 25%" }}
               />
             </div>
           </article>
-        </div>
-        <div className="container">
-          <ImageNote />
         </div>
       </section>
       <AdmissionCta />

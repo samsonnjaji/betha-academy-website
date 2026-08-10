@@ -18,7 +18,6 @@ import { AdmissionCta } from "@/components/admission-cta";
 import { AdmissionSteps } from "@/components/steps";
 import { FeesTable } from "@/components/fees-table";
 import { GalleryGrid } from "@/components/gallery-grid";
-import { ImageNote } from "@/components/image-note";
 import { SectionHeading } from "@/components/section-heading";
 import { images, school } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
@@ -198,12 +197,11 @@ export default function Home() {
         <div className="container vision-preview__grid">
           <div className="vision-preview__image">
             <Image
-              src={images.reading.src}
-              alt={images.reading.alt}
+              src={images.community.src}
+              alt={images.community.alt}
               fill
               sizes="(max-width: 900px) 100vw, 48vw"
             />
-            <ImageNote />
           </div>
           <div className="vision-preview__content">
             <p className="eyebrow">Our direction</p>
@@ -255,8 +253,8 @@ export default function Home() {
           </div>
           <div className="feature-split__image">
             <Image
-              src={images.cbc.src}
-              alt={images.cbc.alt}
+              src={images.outdoorLearning.src}
+              alt={images.outdoorLearning.alt}
               fill
               sizes="(max-width: 900px) 100vw, 48vw"
             />
@@ -382,7 +380,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Life and learning"
               title="A real glimpse of Betha Academy."
-              description="Explore the school entrance, open grounds, classroom blocks, and branded school vehicles."
+              description="Authentic photographs of learning, activities, school life, and the Timau campus."
             />
             <Link className="text-link" href="/gallery">
               See the school gallery

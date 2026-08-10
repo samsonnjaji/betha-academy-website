@@ -37,8 +37,8 @@ npm start
 - School content, phone number, classes, fees, navigation, gallery categories, and
   image metadata: `src/lib/content.ts`
 - Original school photography: `public/images/school`
+- Additional authentic school photographs: `public/images/school/authentic`
 - Updated supplied school-photo sources: `assets/school-photos/set-02-updated-originals`
-- Remaining temporary learner-activity imagery: `public/images`
 - Official logo, favicon, Apple icon, and app-icon assets: `public/brand`
 - Preserved logo source and cleanup assets: `assets/brand`
 - Global design tokens and responsive styling: `src/app/globals.css`
@@ -55,22 +55,23 @@ Still needed before publishing more specific details:
 - Exact physical street address / verified Google Place
 - Official email address
 - Current office hours
-- Verified Facebook, Instagram, TikTok, or YouTube URLs
+- Verified Instagram, TikTok, or YouTube URLs
 - The approved service or recipient for online enquiry submissions
 
 Do not invent these. Location is published only as Timau, Meru County, Kenya.
 
 ## Image replacement
 
-The school entrance, grounds, and classroom-block images are original Betha
-Academy photographs. The remaining learner-activity WebP files are temporary,
-fictional illustrative scenes and are labelled beside the sections where they
-appear. To add more real school photography:
+Campus, classroom, activity, and transport images are authentic Betha Academy
+photographs. Some gallery images reflect school life and community over time and
+should not be read as confirmation of current uniforms, vehicles, or programmes.
+Current classes remain Playgroup through Grade 4. To add more real school
+photography:
 
-1. Add optimized images to `public/images`.
-2. Update the `images` object in `src/lib/content.ts`.
-3. Keep the existing meaningful alt-text structure and replace it with accurate
-   descriptions of the real photographs.
+1. Add optimized WebP images to `public/images/school` or
+   `public/images/school/authentic`.
+2. Update the `images` object and `galleryItems` in `src/lib/content.ts`.
+3. Keep concise, truthful alt text. Do not name individual children.
 
 ## Brand assets
 

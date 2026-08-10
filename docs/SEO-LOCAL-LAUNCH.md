@@ -56,11 +56,11 @@ The website cannot create or claim a Google Business Profile.
 
 ## Social profiles
 
-No official current Facebook, Instagram, TikTok, or YouTube URL has been independently verified.
+Official Facebook page: https://www.facebook.com/BethaAcademy
 
-An older “BETHA Academy” Timau mention appears in third-party school/social directories, but that is not enough to publish a profile URL. Do not infer a Facebook URL from a numeric ID or mirror site.
+Instagram, TikTok, and YouTube remain unverified. Do not infer those URLs.
 
-When official URLs are confirmed, add them in `src/lib/content.ts` under `school.socials`. Icons then appear automatically in the footer, Contact page, and School JSON-LD `sameAs`.
+Confirmed social URLs belong in `src/lib/content.ts` under `school.socials`. Icons then appear automatically in the footer, Contact page, and School JSON-LD `sameAs`.
 
 ## Historical directory cleanup
 
