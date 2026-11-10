@@ -1554,6 +1554,17 @@ textarea {
   margin: 0;
 }
 
+.footer-credit {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.footer-credit:hover {
+  color: var(--yellow-500);
+  border-color: currentColor;
+}
+
 .page-hero {
   position: relative;
   overflow: hidden;

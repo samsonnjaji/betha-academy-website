@@ -45,7 +45,16 @@ export function SiteFooter() {
       </div>
       <div className="container footer-bottom">
         <p>© {new Date().getFullYear()} Betha Academy. All rights reserved.</p>
-        <p>Betha Academy campus imagery is featured throughout the website.</p>
+        <p>
+          Website by{" "}
+          <a
+            href="https://sionaglobal.com"
+            rel="noopener noreferrer"
+            className="footer-credit"
+          >
+            SIONA Technologies
+          </a>
+        </p>
       </div>
     </footer>
   );
